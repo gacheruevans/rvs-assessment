@@ -1,27 +1,30 @@
 {
   "name": "rvs-assessment",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Frontend & Backend interview assessment.",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "concurrently --kill-others-on-fail --prefix-colors auto --names \"FRONTEND,,BACKEND\" \"npm run frontend\" \" sleep 1 \" \"npm run backend\"",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm run start:dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.4.3"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gacheruevans/rvs-assessment.git"
   },
+  "keywords": [
+    "RVS",
+    "Frontend",
+    "Backend"
+  ],
+  "author": "Evans Gacheru Munene",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gacheruevans/rvs-assessment/issues"
+  },
+  "homepage": "https://github.com/gacheruevans/rvs-assessment#readme",
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.4.3",
-    "@eslint/eslintrc": "^3"
+    "concurrently": "^9.2.0"
   }
 }
