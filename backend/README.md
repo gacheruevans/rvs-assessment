@@ -1,7 +1,7 @@
-# NestJS Dependency Injection and CRUD Example
+# NestJS Dependency Injection and Product CRUD Example
 
 ## Description
-This project demonstrates a clean implementation of Dependency Injection (DI) and service-repository architecture using NestJS. It provides a simple CRUD API for managing products.
+This project demonstrates a clean implementation of Dependency Injection (DI) and service, repository architecture using NestJS. It provides a simple CRUD API for managing products.
 
 ## Setup Instructions
 ```bash
