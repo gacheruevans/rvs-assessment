@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "Frontend & Backend interview assessment.",
   "main": "index.js",
-  "scripts": {
-    "start": "concurrently --kill-others-on-fail --prefix-colors auto --names \"FRONTEND,,BACKEND\" \"npm run frontend\" \" sleep 1 \" \"npm run backend\"",
-    "frontend": "cd frontend && npm run dev",
-    "backend": "cd backend && npm run start:dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gacheruevans/rvs-assessment.git"
@@ -23,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/gacheruevans/rvs-assessment/issues"
   },
-  "homepage": "https://github.com/gacheruevans/rvs-assessment#readme",
-  "devDependencies": {
-    "concurrently": "^9.2.0"
-  }
+  "homepage": "https://github.com/gacheruevans/rvs-assessment#readme"
 }

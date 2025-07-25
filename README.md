@@ -1,16 +1,11 @@
 ## RVS Assessment.
-Frontend - Data Fetching & Context in NextJs. 
-Backend - Dependancy Injection & Data Flow in NestJs.
+Frontend - Simple Volunteer management client that demonstrates, sever mocking, data fetching using Context in NextJs. 
+Backend - Simple products API that demonstrates dependancy Injection & Data Flow in NestJs.
 
 ### To Start the Projects:
-Run both client and server side servers:
-
+Navigate to both projects.
 ```bash
-npm run start
-# or
-yarn start
-# or
-pnpm start
-# or
-bun start
+cd backend
+cd frontend
 ```
+Following the instructions of each `README.md` file to setup and have the apps running.
