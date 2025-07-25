@@ -685,5 +685,18 @@
             "status": "approved",
             "id": "20"
         }
+    ],
+    "users":[
+      {
+        "name": "gacheru",
+        "role": "admin",
+        "password": "secret"
+
+      },
+      {
+        "name": "gecheru",
+        "role": "volunteer",
+        "password": "volunteer"
+      }
     ]
 }

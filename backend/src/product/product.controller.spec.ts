@@ -1,18 +1,37 @@
-import { Test, TestingModule } from '@nestjs/testing';
+/* eslint-disable @typescript-eslint/await-thenable */
+import { Test } from '@nestjs/testing';
 import { ProductController } from './product.controller';
+import { ProductService } from './product.service';
 
 describe('ProductController', () => {
-  let controller: ProductController;
+  let productController: ProductController;
+  let productService: ProductService;
 
   beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
+    const moduleRef = await Test.createTestingModule({
       controllers: [ProductController],
+      providers: [ProductService],
     }).compile();
 
-    controller = module.get<ProductController>(ProductController);
+    productService = moduleRef.get(ProductService);
+    productController = moduleRef.get(ProductController);
   });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
+  describe('findAll', () => {
+    it('should return an array of products', async () => {
+      const mockData = [
+        {
+          id: 1,
+          name: 'test',
+          price: 1,
+        },
+      ];
+
+      jest.spyOn(productService, 'findAll').mockImplementation(() => mockData);
+
+      const result = productController.findAll();
+
+      expect(result).toBe(mockData);
+    });
   });
 });

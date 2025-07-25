@@ -26,8 +26,8 @@ const VoulunteerApplication = () => {
     currentPage * itemsPerPage
   );
   return (
-    <div className="h-screen">
-      <h1 className="text-1xl font-semibold mb-4 text-right text-blue-500">Volunteer Applicant List</h1>
+    <div className="h-screen py-2">
+      <h1 className="text-1xl font-semibold p-2 text-right text-blue-500">Volunteer Applicant List</h1>
       <div className="text-slate-600 grid grid-cols-5 font-bold border rounded-t-md p-2 bg-slate-200 text-center">
         <div>#</div>
         <div className="text-start">Volunteer</div>

@@ -16,7 +16,7 @@ const Header = () => {
         <nav className="hidden md:block">
         <ul className="flex gap-10 items-center justify-start">
           <li>
-            <Link href="/dashboard/volunteers" className="bg-blue-500 text-white font-semibold hover:text-gray-500 hover:bg-blue-300 p-2 rounded-md">Manage Volunteers</Link>
+            <Link href="/dashboard/requests" className="bg-blue-500 text-white font-semibold hover:text-white-500 hover:bg-blue-400 p-2 rounded-md">Manage Volunteers</Link>
           </li>
         </ul>
         </nav>

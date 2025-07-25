@@ -12,7 +12,7 @@ const Services = () => {
   if (!data || data.length === 0) return <div>No services found.</div>;
 
   return (
-    <div className="h-screen ">
+    <div className="h-screen py-2">
       <h1 className="text-1xl text-blue-500 font-semibold p-2 text-right">Core Volunteer Services</h1>
       <div className="bg-blue-50 border text-slate-600 rounded-t-md grid grid-cols-5 font-bold border-b p-2 text-center">
         <div>#</div>
@@ -37,7 +37,7 @@ const Services = () => {
           </div>
         ))}
       </div>
-      <Modal></Modal>
+      <Modal isVisible={showModal} onClose={()=> setShowModal(false)}/>
     </div>
   )
 }

@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from 'react'
 import { useData } from '@/app/contexts/VolunteerContext'
+import Modal from './modal'
 
 const Volunteers = () => {
   const { vdata, vloading, verror } = useData();
   const [currentPage, setCurrentPage] = useState(1);
+  const [showModal, setShowModal] = useState(false);
 
   if (vloading) return <div>Loading...</div>;
   if (verror) return <div>Error: {verror}</div>;
@@ -36,8 +38,11 @@ const Volunteers = () => {
             <div className="text-start">{volunteer.name}</div>
             <div className="text-start">{volunteer.contact ?? "N/A"}</div>
             <div className="space-x-1 text-center">
-              <button className="text-xs font-semibold p-1 rounded-md bg-green-500 text-white hover:bg-green-300 cursor-pointer">Assign</button>
-              <button className="text-xs font-semibold p-1 rounded-md bg-blue-500 text-white hover:bg-blue-300 cursor-pointer">Review</button>
+              <button 
+                className="text-xs font-semibold p-1 rounded-md bg-blue-500 text-white hover:bg-blue-300 cursor-pointer"
+                onClick={() => setShowModal(true)}
+                disabled
+              >Review</button>
             </div>
           </div>
         ))}
@@ -61,6 +66,7 @@ const Volunteers = () => {
           Next
         </button>
       </div>
+      <Modal isVisible={showModal} onClose={()=> setShowModal(false)}/>
     </div>
   )
 }
