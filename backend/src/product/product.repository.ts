@@ -11,7 +11,7 @@ export class ProductRepository {
     return this.products;
   }
 
-  findById(id: number):Product | undefined {
+  findById(id: number): Product | undefined {
     return this.products.find((p) => p.id === id);
   }
 

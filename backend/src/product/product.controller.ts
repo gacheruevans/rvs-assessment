@@ -17,7 +17,7 @@ import { ApiTags } from '@nestjs/swagger';
 export class ProductController {
   constructor(private readonly productService: ProductService) {}
 
-  @Get('')
+  @Get('/')
   findAll() {
     return this.productService.findAll();
   }
@@ -28,7 +28,7 @@ export class ProductController {
     if (!product) throw new NotFoundException('Product not found');
     return product;
   }
-  @Post('')
+  @Post()
   create(@Body() dto: CreateProductDto) {
     return this.productService.create(dto);
   }
