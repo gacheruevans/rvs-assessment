@@ -1,10 +1,8 @@
 "use client";
 import React from 'react'
-import { usePathname } from 'next/navigation'
-import ClientLink from '../clientlink'
+import { usePathname } from 'next/navigation' 
 import Link from 'next/link';
 const navigation = [
-    { href: "profile", label: "Admin" },
     { href: "volunteers", label: "Volunteers" },
     { href: "requests", label: "Requests" },
     { href: "applications", label: "Applicants" },

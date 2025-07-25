@@ -16,16 +16,7 @@ const Header = () => {
         <nav className="hidden md:block">
         <ul className="flex gap-10 items-center justify-start">
           <li>
-          <Link href="/" className="text-gray-700 hover:text-blue-600">Home</Link>
-          </li>
-          <li>
-          <Link href="/#reports" className="text-gray-700 hover:text-blue-600">Reports</Link>
-          </li>
-          <li>
-          <Link href="/#about" className="text-gray-700 hover:text-blue-600">About</Link>
-          </li>
-          <li>
-          <Link href="/#contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
+            <Link href="/dashboard/volunteers" className="bg-blue-500 text-white font-semibold hover:text-gray-500 hover:bg-blue-300 p-2 rounded-md">Manage Volunteers</Link>
           </li>
         </ul>
         </nav>
@@ -44,11 +35,6 @@ const Header = () => {
         </div>
       </div>
       {/* Desktop Profile/Actions */}
-      <div className="hidden md:flex items-center">
-        <Link href="/dashboard/profile" className="p-2 text-gray-700 hover:text-blue-600">Profile</Link>
-        <Link href="/#login" className="p-2 text-gray-700 hover:text-blue-600">Login</Link>
-        <Link href="/#register" className="font-semibold p-2 rounded-sm hover:bg-slate-200 border ml-4 text-gray-700 hover:text-blue-600">Register</Link>
-      </div>
       </Container>
       {/* Mobile Menu */}
       {open && (
@@ -56,25 +42,7 @@ const Header = () => {
         <nav>
         <ul className="flex flex-col gap-4 p-4">
           <li>
-          <Link href="/" className="text-gray-700 hover:text-blue-600" onClick={() => setOpen(false)}>Home</Link>
-          </li>
-          <li>
-          <Link href="/#reports" className="text-gray-700 hover:text-blue-600" onClick={() => setOpen(false)}>Reports</Link>
-          </li>
-          <li>
-          <Link href="/#about" className="text-gray-700 hover:text-blue-600" onClick={() => setOpen(false)}>About</Link>
-          </li>
-          <li>
-          <Link href="/#contact" className="text-gray-700 hover:text-blue-600" onClick={() => setOpen(false)}>Contact</Link>
-          </li>
-          <li>
-          <Link href="/dashboard/profile" className="p-2 text-gray-700 hover:text-blue-600" onClick={() => setOpen(false)}>Profile</Link>
-          </li>
-          <li>
-          <Link href="/#login" className="p-2 text-gray-700 hover:text-blue-600" onClick={() => setOpen(false)}>Login</Link>
-          </li>
-          <li>
-          <Link href="/#register" className="font-semibold p-2 rounded-sm hover:bg-slate-200 border text-gray-700 hover:text-blue-600" onClick={() => setOpen(false)}>Register</Link>
+          <Link href="/dashboard" className="text-gray-700 hover:text-blue-600" onClick={() => setOpen(false)}>Manage Volunteers</Link>
           </li>
         </ul>
         </nav>
