@@ -1,8 +1,14 @@
 import React from 'react'
+import { RequestsProvider } from '@/app/contexts/RequestsContext'
+import Container from '@/app/container'
 
-const RequestsLayout = () => {
+const RequestsLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>layout</div>
+    <RequestsProvider>
+      <Container>
+       {children}
+      </Container> 
+    </RequestsProvider>
   )
 }
 

@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react'
+import Container from '@/app/container'
 
 const ProfileLayout = ({ children }: { children: ReactNode }) => {
-  console.log("Profile rendered");
   return (
-    <div className="">
+    <Container>
         Profile Layout
         {children}
-    </div>
+    </Container>
   )
 }
 

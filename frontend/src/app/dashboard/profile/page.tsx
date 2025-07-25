@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="">profile page</div>
+    <div className="h-screen">Admin page</div>
   )
 }
 export default page
