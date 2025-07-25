@@ -5,6 +5,7 @@ import Modal from './modal'
 
 const VolunteerRequests = () => {
   const { data, loading, error } = useRequestsData();
+
   const [currentPage, setCurrentPage] = useState(1);
   const [showModal, setShowModal] = useState(false);
 
@@ -13,7 +14,7 @@ const VolunteerRequests = () => {
   if(!data || data.length === 0) return <div>No requests found</div>
 
   /* Pagination logic */
-  const itemsPerPage = 12;
+  const itemsPerPage = 10;
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
   const paginatedData = data.slice(
@@ -30,9 +31,9 @@ const VolunteerRequests = () => {
         <div className="text-start">Service</div>
         <div className="text-center">Actions</div>
       </div>
-      <div className="grid grid-cols-1 gap-4">
+      <div className="text-slate-600 max-h-screen overflow-scroll grid grid-cols-1 gap-4">
         {paginatedData.map((facilityrequest: { id: number; facility: string; slots: number, serviceId: number }) => (
-          <div key={facilityrequest.id} className="grid grid-cols-5 border-b py-2">
+          <div key={facilityrequest.id} className="grid grid-cols-5 border-b border-slate-300 p-1 text-center">
             <div className="text-center">{facilityrequest.id}</div>
             <div>{facilityrequest.facility}</div>
             <div>{facilityrequest.slots}</div>
@@ -72,13 +73,7 @@ const VolunteerRequests = () => {
           Next
         </button>
       </div>
-      <Modal isVisible={showModal} onClose={()=> setShowModal(false)}>
-        <div className="p-6">
-          <h3 className="text-xl font-semibold text-slate-600 mb-5">
-            Assign Volunteers
-          </h3>
-        </div>
-      </Modal>
+      <Modal isVisible={showModal} onClose={()=> setShowModal(false)}/>
     </div>
   )
 }

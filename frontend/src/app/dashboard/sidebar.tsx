@@ -2,7 +2,7 @@
 import React from 'react'
 import { usePathname } from 'next/navigation'
 import ClientLink from '../clientlink'
-
+import Link from 'next/link';
 const navigation = [
     { href: "profile", label: "Admin" },
     { href: "volunteers", label: "Volunteers" },
@@ -25,9 +25,9 @@ const DashboardSidebar = () => {
                             key={href}
                             className={`border-b-1 border-b-slate-400 p-6 hover:bg-slate-400 ${isActive ? "bg-slate-600 border-r-4 border-blue-300" : ""}`}
                         >
-                            <ClientLink href={href}>
+                            <Link href={href}>
                                 {label}
-                            </ClientLink>
+                            </Link>
                         </div>
                     );
                 })

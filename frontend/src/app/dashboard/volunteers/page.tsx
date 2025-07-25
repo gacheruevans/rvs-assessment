@@ -11,7 +11,7 @@ const Volunteers = () => {
   if (!vdata || vdata.length === 0) return <div>No volunteers found.</div>;
   
   /* Pagination logic */
-  const itemsPerPage = 15;
+  const itemsPerPage = 10;
   const totalPages = Math.ceil(vdata.length / itemsPerPage);
 
   const paginatedData = vdata.slice(
